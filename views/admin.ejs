@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Let's travel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/admin">Admin Page</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="tel" placeholder="Phone number"
+                            aria-label="Phone number">
+                        <button class="btn btn-outline-primary text-nowrap" type="submit">Call me</button>
+                    </form>
+                    <button class="log-out-btn btn btn-outline-secondary ms-1">Log Out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container shadow p-3 mb-5 bg-body-tertiary rounded">
+            <h1 class="text-center">Admin Page</h1>
+            <hr>
+            <div class="d-flex align-items-start ">
+                <div class="nav flex-column nav-pills me-3 border rounded w-25 p-3" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-articles-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-articles" type="button" role="tab" aria-controls="v-pills-articles"
+                        aria-selected="true">Articles</button>
+                    <button class="nav-link" id="v-pills-mails-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-mails" type="button" role="tab" aria-controls="v-pills-mails"
+                        aria-selected="false">Mails</button>
+                    <button class="nav-link" id="v-pills-requests-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-requests" type="button" role="tab" aria-controls="v-pills-requests"
+                        aria-selected="false">Callback requests</button>
+                    <button class="nav-link d-none" id="v-pills-add-post-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-add-post" type="button" role="tab" aria-controls="v-pills-add-post"
+                        aria-selected="false">Create post</button>
+                    <button class="nav-link d-none" id="v-pills-update-post-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-update-post" type="button" role="tab"
+                        aria-controls="v-pills-update-post" aria-selected="false">Update post</button>
+                </div>
+                <div class="tab-content border rounded w-75 p-3" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-articles" role="tabpanel"
+                        aria-labelledby="v-pills-articles-tab" tabindex="0">
+                        <button class="add-post btn btn-primary mb-3">Add post</button>
+                        <table class="articles-list table table-striped">
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="tab-pane fade emails-list" id="v-pills-mails" role="tabpanel"
+                        aria-labelledby="v-pills-mails-tab" tabindex="0">
+                        <table class="table table-striped">
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                    <div class="tab-pane fade requests-list" id="v-pills-requests" role="tabpanel"
+                        aria-labelledby="v-pills-requests-tab" tabindex="0">
+                        <table class="table table-striped">
+                            <tbody></tbody>
+
+                        </table>
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-add-post" role="tabpanel"
+                        aria-labelledby="v-pills-add-post-tab" tabindex="0">
+                        <h1>Create post</h1>
+                        <form class="create-post-form">
+                            <div class="mb-3">
+                                <label for="title" class="mb-1">Title</label>
+                                <input type="text" id="title" class="form-control" placeholder="Title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="country" class="mb-1">Country</label>
+                                <input type="text" id="country" class="form-control" placeholder="Country">
+                            </div>
+                            <div class="mb-3">
+                                <label for="imageURL" class="mb-1">Image</label>
+                                <input type="url" id="imageURL" class="form-control" placeholder="URL">
+                            </div>
+                            <div class="mb-3">
+                                <label for="image-file" class="mb-1">or</label>
+                                <input type="file" id="image-file" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="text" class="mb-1">Text</label>
+                                <textarea name="" id="text" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Create</button>
+                        </form>
+                    </div>
+
+                    <!-- Update Form -->
+                    <div class="tab-pane fade" id="v-pills-update-post" role="tabpanel"
+                        aria-labelledby="v-pills-update-post-tab" tabindex="0">
+                        <h1>Update post</h1>
+                        <form class="update-post-form">
+                            <div class="mb-3">
+                                <label for="update-title" class="mb-1">Title</label>
+                                <input type="text" id="update-title" class="form-control" placeholder="Title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="update-text" class="mb-1">Text</label>
+                                <textarea name="" id="update-text" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Update post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/admin/js/create-post.js"></script>
+    <script src="/admin/js/delete-post.js"></script>
+    <script src="/admin/js/update-post.js"></script>
+    <script src="/admin/js/main.js"></script>
+</body>
+
+</html>

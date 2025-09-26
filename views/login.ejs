@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">Let's travel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/admin">Admin Page</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex call-me-form" style="border: 5px solid red;">
+                        <input class="form-control me-2" type="tel" placeholder="Phone number"
+                            aria-label="Phone number">
+                        <button class="btn btn-outline-primary text-nowrap" type="submit">Call me</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <h1 class="text-center my-4">Admin Page</h1>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="sign-in-tab" data-bs-toggle="tab"
+                                data-bs-target="#sign-in-tab-pane" type="button" role="tab" aria-controls="sign-in"
+                                aria-selected="true">Sign in</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab"
+                                data-bs-target="#register-tab-pane" type="button" role="tab"
+                                aria-controls="register-tab-pane" aria-selected="false">Register</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active py-3" id="sign-in-tab-pane" role="tabpanel"
+                            aria-labelledby="sign-in-tab" tabindex="0">
+                            <form action="" class="sign-in-form">
+                                <div class="mb-3">
+                                    <label for="sign-in-email" class="mb-1">Email address</label>
+                                    <input class="form-control" type="email" id="sign-in-email"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="sign-in-password" class="mb-1">Password</label>
+                                    <input class="form-control" type="password" id="sign-in-password"
+                                        placeholder="Password">
+                                </div>
+                                <button class="btn btn-primary">Sign In</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade py-3" id="register-tab-pane" role="tabpanel"
+                            aria-labelledby="register-tab" tabindex="0">
+                            <form action="" class="register-form">
+                                <div class="mb-3">
+                                    <label for="register-email" class="mb-1">Email address</label>
+                                    <input class="form-control" type="email" id="register-email"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="register-password" class="mb-1">Password</label>
+                                    <input class="form-control" type="password" id="register-password"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="register-re-enter-password" class="mb-1">Re-enter password</label>
+                                    <input class="form-control" type="password" id="register-re-enter-password"
+                                        placeholder="Re-enter password">
+                                </div>
+                                <button class="btn btn-primary">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
