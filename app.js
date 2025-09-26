@@ -13,7 +13,7 @@ let auth = require('./controllers/auth');
 
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost/travels');
+mongoose.connect('mongodb+srv://JinglinYang:12345@cluster0.rd9giui.mongodb.net/travels');
 app.use(express.json());
 app.use(cookieParser());
 
