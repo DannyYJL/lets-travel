@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 let username = process.env.mongoUserName;
 let password = process.env.mongoUserPass;
 
-mongoose.connect('mongodb+srv://JinglinYang:12345@cluster0.rd9giui.mongodb.net/');
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.rd9giui.mongodb.net/travels`);
 app.use(express.json());
 app.use(cookieParser());
 
