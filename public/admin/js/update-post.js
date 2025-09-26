@@ -10,7 +10,7 @@
     articlesBlock.addEventListener('click', async function (e) {
         if (e.target.classList.contains('edit-btn')) {
             id = e.target.parentNode.parentNode.querySelector('.id').value;
-            let postInfo = await fetch('http://localhost:3000/posts/' + id)
+            let postInfo = await fetch('/posts/' + id)
                 .then((response) => response.json())
                 .then((data) => data)
             titleInput.value = postInfo.title;
@@ -28,7 +28,7 @@
             updateDescription = textArea.value.substring(0, textArea.value.indexOf('.') + 1); //提取字符串substring(开始位置，结束位置【不包含】)
         }
 
-        fetch('http://localhost:3000/posts/' + id, {
+        fetch('/posts/' + id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
