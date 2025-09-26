@@ -70,10 +70,10 @@ app.get('/login', (req, resp) => {
 
 })
 
-<<<<<<< HEAD
+
 let port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`Listening ${port}....`));
-=======
+
 app.listen(3000, () => console.log('Listening 3000....'));
->>>>>>> 2827bc7a5da82e5d19453606f2b92375a4a83693
+
