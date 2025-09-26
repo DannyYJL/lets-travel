@@ -13,7 +13,7 @@ let auth = require('./controllers/auth');
 
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb+srv://JinglinYang:12345@cluster0.rd9giui.mongodb.net/travels');
+mongoose.connect('mongodb://localhost/travels');
 app.use(express.json());
 app.use(cookieParser());
 
@@ -70,4 +70,6 @@ app.get('/login', (req, resp) => {
 
 })
 
-app.listen(3000, () => console.log('Listening 3000....'));
+let port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Listening ${port}....`));
